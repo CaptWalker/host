@@ -45,7 +45,9 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         AdditionalInformationCapability: 'additional_information_capability@http://localhost:8081/remoteEntry.js',
-        KycCapability: 'kyc_capability@http://localhost:8082/remoteEntry.js'
+        KycCapability: 'kyc_capability@http://localhost:8082/remoteEntry.js',
+        RFA: 'rfa@http://localhost:8084/remoteEntry.js',
+        RFI: 'rfi@http://localhost:8083/remoteEntry.js'
       },
       exposes: {},
       shared: {
