@@ -1,14 +1,13 @@
 import React from 'react';
-import RFA from 'RFA/RFA';
-import { Route, Switch } from 'react-router-dom';
-import { aic, kycCapability } from '../AppConfig/AppConfig';
 
-function Content() {
+function Content({access}) {
   return (
     <div className='content-height w-100 p-3'>
-        {kycCapability()}
-        {aic()}
-        
+        {access.map((item, index) => {
+            return (
+                <div className='mb-3' key={item.id + index}>{item.appConfig()}</div>
+            )
+        })}
     </div>
   )
 }
