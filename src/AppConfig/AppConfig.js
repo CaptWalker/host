@@ -3,6 +3,7 @@ const AIC = React.lazy(() => import('AdditionalInformationCapability/AIC'));
 const KycCapability = React.lazy(() => import('KycCapability/KycCapability'));
 const RFA = React.lazy(() => import('RFA/RFA'));
 const RFI = React.lazy(() => import('RFI/RFI'));
+const Content = React.lazy(() => import('Content/Content'));
 import { ErrorBoundary } from '../ErrorBoundary/ErrorBoundary';
 
 export const aic = () => (
@@ -36,6 +37,14 @@ export const rfi = () => (
         </Suspense>
     </ErrorBoundary>
 )
+
+export const content = (access) => (
+    <ErrorBoundary>
+        <Suspense fallback={null}>
+            <Content access={access}/>
+        </Suspense>
+    </ErrorBoundary>
+);
 
 const appList = [
     {

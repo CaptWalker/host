@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import Content from "./Content/Content";
-import Header from "./Header/Header";
-import "./index.css";
-import Navbar from "./Navbar/Navbar";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, BrowserRouter, Routes } from 'react-router-dom';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FrontPage from './FrontPage/FrontPage';
 
-const App = () => {
-  const [access, setAccess] = useState([]);
-  useEffect(() => {
-  }, [access])
-  
-  return (
-    <div>
-      <Header setAccess={setAccess}/>
-      <div className="flex">
-        <Navbar access={access}/>
-        <Content access={access} />
-      </div>
-    </div>
-  )
-};
-ReactDOM.render(<App />, document.getElementById("app"));
+const App = () => (
+  <div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" exact>
+            Missing Context
+          </Route>
+          <Route path="/context/:context" element={<FrontPage />} exact>
+          </Route>
+        </Routes>
+    </BrowserRouter>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('app'));

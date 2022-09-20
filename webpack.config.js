@@ -47,7 +47,8 @@ module.exports = {
         AdditionalInformationCapability: 'additional_information_capability@http://localhost:8081/remoteEntry.js',
         KycCapability: 'kyc_capability@http://localhost:8082/remoteEntry.js',
         RFI: 'rfi@http://localhost:8083/remoteEntry.js',
-        RFA: 'rfa@http://localhost:8084/remoteEntry.js'
+        RFA: 'rfa@http://localhost:8084/remoteEntry.js',
+        Content: 'content_app@http://localhost:8085/remoteEntry.js'
       },
       exposes: {},
       shared: {
