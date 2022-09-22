@@ -10,9 +10,9 @@ const App = () => (
     <BrowserRouter>
         <Routes>
           <Route path="/" exact>
-            Missing Context
+            Missing Case Id
           </Route>
-          <Route path="/context/:context" element={<FrontPage />} exact>
+          <Route path="/caseId/:caseId" element={<FrontPage />} exact>
           </Route>
         </Routes>
     </BrowserRouter>

@@ -11,5 +11,9 @@ body{
 }
 
 .content-height{
-  height: 92vh;
+  min-height: 92vh;
+}
+
+.margin-right{
+  margin-right: 1rem;
 }

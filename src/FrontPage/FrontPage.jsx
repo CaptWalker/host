@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { content, setUserAccess } from '../AppConfig/AppConfig';
+import { cases, content, setUserAccess } from '../AppConfig/AppConfig';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 
 function FrontPage() {
-  const context = useParams().context.split(',');
-  if(context.length===0){
+  const caseId = useParams().caseId;
+  if(caseId==='' || cases[caseId] === undefined){
     return (
         <div>
-            No Context Provided
+            Please provide case Id
         </div>
     )
   }
 
-  const [access, setAccess] = useState(setUserAccess(context));
+  const [access, setAccess] = useState(setUserAccess(cases[caseId]));
 
   useEffect(() => {}, [access]);
 
